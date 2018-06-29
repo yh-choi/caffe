@@ -49,11 +49,15 @@ image (`examples/images/cat.jpg`) using this command:
 ```
 ./build/examples/cpp_classification/classification.bin \
   models/bvlc_reference_caffenet/deploy.prototxt \
-  models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel \
+models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel \
   data/ilsvrc12/imagenet_mean.binaryproto \
   data/ilsvrc12/synset_words.txt \
   examples/images/cat.jpg
 ```
+./build/examples/cpp_classification/classification.bin examples/mnist/lenet.prototxt examples/mnist/lenet_iter_10000.caffemodel examples/mnist/label.txt examples/images/1.jpeg
+
+
+
 The output should look like this:
 ```
 ---------- Prediction for examples/images/cat.jpg ----------
