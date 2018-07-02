@@ -74,6 +74,7 @@ Classifier::Classifier(const string& model_file,
   mean_ = cv::Mat( input_geometry_, CV_32FC3, cv::Scalar(93.5940,104.7624,129.1863));
 
   /* Load labels. */
+  //net_->Forward();/////##
   std::ifstream labels(label_file.c_str());
   CHECK(labels) << "Unable to open labels file " << label_file;
   string line;
@@ -164,7 +165,7 @@ std::vector<float> Classifier::Predict(const cv::Mat& img) {
   net_->Forward();
 
   /* Copy the output layer to a std::vector */
-  Blob<float>* output_layer = net_->output_blobs()[0];
+  shared_ptr<Blob<float>> output_layer = net_->blob_by_name("fc8");
   const float* begin = output_layer->cpu_data();
   const float* end = begin + output_layer->channels();
   return std::vector<float>(begin, end);

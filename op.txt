@@ -1,0 +1,3 @@
+./build/examples/cpp_classification/classification4.bin examples/mnist/vgg_face_caffe/VGG_FACE_deploy.prototxt examples/mnist/vgg_face_caffe/VGG_FACE.caffemodel examples/mnist/vgg_face_caffe/image/ examples/mnist/vgg_face_caffe/image/jeni.jpeg 
+
+./build/examples/mnist/vgg_face_caffe/classification_vggface_data.bin examples/mnist/vgg_face_caffe/VGG_FACE_deploy.prototxt examples/mnist/vgg_face_caffe/VGG_FACE.caffemodel examples/mnist/vgg_face_caffe/image/ examples/mnist/vgg_face_caffe/image/jeni.jpeg
